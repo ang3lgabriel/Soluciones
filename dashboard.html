@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Soluciones Digitales HN</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Soluciones Digitales HN</div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">Tienda</a></li>
+        <li><a href="login.html" onclick="cerrarSesion()">Salir</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h1>Panel de Administración</h1>
+    
+    <section class="cards" id="info-empleado">
+      <!-- Datos del empleado o admin -->
+    </section>
+
+    <section id="admin-section" style="display:none;">
+      <h2>Gestión Admin</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Empleados</h3>
+          <button onclick="editarEmpleados()">Editar Empleados</button>
+        </div>
+        <div class="card">
+          <h3>Compradores</h3>
+          <button onclick="editarCompradores()">Editar Compradores</button>
+        </div>
+        <div class="card">
+          <h3>Productos</h3>
+          <button onclick="editarProductos()">Editar Productos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Soluciones Digitales HN. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

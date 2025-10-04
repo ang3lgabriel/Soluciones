@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script> 
+ <script src="js/index.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Soluciones Digitales HN</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="register.html">Registrarse</a>
+      <a href="login.html">Login Empleado</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+    </nav>
+  </header>
+
+  <!-- Burbujas flotantes -->
+  <div class="floating-bubble" id="bubble-login">
+    <a href="login.html">Ingresar (Empleado)</a>
+  </div>
+  <div class="floating-bubble promo" id="bubble-promo">
+    <a href="register.html">¡Regístrate y recibe un descuento!</a>
+  </div>
+
+  <!-- Lista de productos -->
+  <section class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid-productos" id="lista-productos">
+      <!-- Aquí el script.js insertará los 10 productos -->
+    </div>
+  </section>
+
+  <!-- Carrito -->
+  <section class="carrito">
+    <h2>Carrito de Compras</h2>
+    <div id="items-carrito"></div>
+    <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+    <p><strong>Descuento:</strong> -$<span id="descuento">0.00</span></p>
+    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+    <button id="btn-ticket">Generar Ticket</button>
+    <div id="ticket"></div>
+  </section>
+  <!-- Quiénes somos -->
+  <section id="quienes-somos" class="quienes-somos">
+    <h2>Quiénes somos</h2>
+    <div class="qs-container">
+      <div class="qs-logo">
+        <img src="img/logo.png" alt="Logo Soluciones Digitales HN" />
+      </div>
+      <div class="qs-info">
+        <h3>Visión</h3>
+        <p>Ser la empresa líder en soluciones digitales en Honduras, ofreciendo tecnología innovadora que mejore la vida de nuestros clientes.</p>
+
+        <h3>Misión</h3>
+        <p>Brindar productos y servicios tecnológicos de calidad, accesibles y confiables, que impulsen el desarrollo personal y empresarial.</p>
+
+        <h3>Objetivo General</h3>
+        <p>Impulsar la transformación digital mediante soluciones accesibles y eficientes.</p>
+
+        <h3>Objetivos Específicos</h3>
+        <ul>
+          <li>Ofrecer productos tecnológicos de última generación.</li>
+          <li>Brindar soporte al cliente con excelencia y rapidez.</li>
+          <li>Fomentar la innovación en el mercado local.</li>
+        </ul>
+
+        <h3>Ventas Totales</h3>
+        <p id="ventas-totales">0</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Soluciones Digitales HN - Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
