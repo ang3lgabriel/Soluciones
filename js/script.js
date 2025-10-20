@@ -2,16 +2,40 @@
 // Productos de la tienda
 // ----------------------
 const productos = [
-  { id: 1, nombre: "Laptop HP", precio: 650, imagen: "img/producto1.jpeg", codigo: "P001" },
-  { id: 2, nombre: "Smartphone Samsung", precio: 450, imagen: "img/producto2.jpg", codigo: "P002" },
-  { id: 3, nombre: "Auriculares Bluetooth", precio: 80, imagen: "img/producto3.jpeg", codigo: "P003" },
-  { id: 4, nombre: "Smartwatch Xiaomi", precio: 120, imagen: "img/producto4.jpeg", codigo: "P004" },
-  { id: 5, nombre: "Teclado Mecánico", precio: 60, imagen: "img/producto5.jpg", codigo: "P005" },
-  { id: 6, nombre: "Mouse Gamer", precio: 40, imagen: "img/producto6.jpg", codigo: "P006" },
-  { id: 7, nombre: "Monitor LG 24''", precio: 200, imagen: "img/producto7.jpeg", codigo: "P007" },
-  { id: 8, nombre: "Impresora Canon", precio: 150, imagen: "img/producto8.jpeg", codigo: "P008" },
-  { id: 9, nombre: "Cámara Web HD", precio: 70, imagen: "img/producto9.jpeg", codigo: "P009" },
-  { id: 10, nombre: "Tablet Lenovo", precio: 300, imagen: "img/producto10.jpg", codigo: "P010" }
+  // Computadoras y Laptops
+  { id: 1, nombre: "Laptop HP", precio: 650, imagen: "img/producto1.jpeg", codigo: "P001", seccion: "laptops" },
+  { id: 2, nombre: "Laptop Dell", precio: 700, imagen: "img/producto11.jpg", codigo: "P011", seccion: "laptops" },
+  { id: 3, nombre: "PC Gamer", precio: 1200, imagen: "img/producto12.jpg", codigo: "P012", seccion: "laptops" },
+  { id: 4, nombre: "Laptop Lenovo", precio: 600, imagen: "img/producto10.jpg", codigo: "P010", seccion: "laptops" },
+  { id: 5, nombre: "Laptop ASUS", precio: 750, imagen: "img/producto13.jpg", codigo: "P013", seccion: "laptops" },
+
+  // Celulares y Tablets
+  { id: 6, nombre: "Smartphone Samsung", precio: 450, imagen: "img/producto2.jpg", codigo: "P002", seccion: "celulares" },
+  { id: 7, nombre: "Smartphone iPhone", precio: 950, imagen: "img/producto14.jpg", codigo: "P014", seccion: "celulares" },
+  { id: 8, nombre: "Tablet Lenovo", precio: 300, imagen: "img/producto15.jpg", codigo: "P015", seccion: "celulares" },
+  { id: 9, nombre: "Tablet Samsung", precio: 350, imagen: "img/producto16.jpg", codigo: "P016", seccion: "celulares" },
+  { id: 10, nombre: "Smartphone Xiaomi", precio: 400, imagen: "img/producto4.jpeg", codigo: "P004", seccion: "celulares" },
+
+  // Accesorios
+  { id: 11, nombre: "Auriculares Bluetooth", precio: 80, imagen: "img/producto3.jpeg", codigo: "P003", seccion: "accesorios" },
+  { id: 12, nombre: "Teclado Mecánico", precio: 60, imagen: "img/producto5.jpg", codigo: "P005", seccion: "accesorios" },
+  { id: 13, nombre: "Mouse Gamer", precio: 40, imagen: "img/producto6.jpg", codigo: "P006", seccion: "accesorios" },
+  { id: 14, nombre: "Audífonos Gamer", precio: 90, imagen: "img/producto17.jpg", codigo: "P017", seccion: "accesorios" },
+  { id: 15, nombre: "Cargador USB-C", precio: 25, imagen: "img/producto18.jpg", codigo: "P018", seccion: "accesorios" },
+
+  // Gaming
+  { id: 16, nombre: "Monitor LG 24''", precio: 200, imagen: "img/producto7.jpeg", codigo: "P007", seccion: "gaming" },
+  { id: 17, nombre: "Mouse Gaming Razer", precio: 70, imagen: "img/producto19.jpg", codigo: "P019", seccion: "gaming" },
+  { id: 18, nombre: "Teclado RGB", precio: 100, imagen: "img/producto20.jpg", codigo: "P020", seccion: "gaming" },
+  { id: 19, nombre: "Silla Gamer", precio: 250, imagen: "img/producto21.jpg", codigo: "P021", seccion: "gaming" },
+  { id: 20, nombre: "Auriculares Gamer", precio: 120, imagen: "img/producto22.jpg", codigo: "P022", seccion: "gaming" },
+
+  // Oficina y Hogar
+  { id: 21, nombre: "Impresora Canon", precio: 150, imagen: "img/producto8.jpeg", codigo: "P008", seccion: "oficina" },
+  { id: 22, nombre: "Cámara Web HD", precio: 70, imagen: "img/producto9.jpeg", codigo: "P009", seccion: "oficina" },
+  { id: 23, nombre: "Monitor HP 27''", precio: 220, imagen: "img/producto23.jpg", codigo: "P023", seccion: "oficina" },
+  { id: 24, nombre: "Router WiFi", precio: 60, imagen: "img/producto24.jpg", codigo: "P024", seccion: "oficina" },
+  { id: 25, nombre: "Proyector Mini", precio: 180, imagen: "img/producto25.jpg", codigo: "P025", seccion: "oficina" }
 ];
 
 // ----------------------
@@ -21,20 +45,24 @@ let carrito = [];
 let descuento = 0;
 
 // ----------------------
-// Mostrar productos
+// Mostrar productos por sección
 // ----------------------
-const listaProductos = document.getElementById("lista-productos");
-productos.forEach(prod => {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  card.innerHTML = `
-    <img src="${prod.imagen}" alt="${prod.nombre}">
-    <h3>${prod.nombre}</h3>
-    <p><strong>Código:</strong> ${prod.codigo}</p>
-    <p><strong>Precio:</strong> $${prod.precio}</p>
-    <button onclick="agregarCarrito(${prod.id})">Agregar al carrito</button>
-  `;
-  listaProductos.appendChild(card);
+const secciones = ["laptops","celulares","accesorios","gaming","oficina"];
+
+secciones.forEach(seccion => {
+  const contenedor = document.getElementById(`productos-${seccion}`);
+  productos.filter(p => p.seccion === seccion).forEach(prod => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+      <img src="${prod.imagen}" alt="${prod.nombre}">
+      <h3>${prod.nombre}</h3>
+      <p><strong>Código:</strong> ${prod.codigo}</p>
+      <p><strong>Precio:</strong> $${prod.precio}</p>
+      <button onclick="agregarCarrito(${prod.id})">Agregar al carrito</button>
+    `;
+    contenedor.appendChild(card);
+  });
 });
 
 // ----------------------
