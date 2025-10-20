@@ -4,6 +4,7 @@
 let empleados = JSON.parse(localStorage.getItem("empleados")) || [
   { nombre: "Juan", puesto: "vendedor", password: "1234", ventas: 5, nuevosEmpleados: 1, calidad: "Alta" },
   { nombre: "Admin", puesto: "admin", password: "admin123" }
+  { nombre: "Dayra", puesto: "vendedor", password: "1234", ventas: 18, nuevosEmpleados: 2, calidad: "baja" }
 ];
 
 let compradores = JSON.parse(localStorage.getItem("compradores")) || [
