@@ -4,24 +4,23 @@
 const productos = [
   // Computadoras y Laptops
   { id: 1, nombre: "Laptop HP", precio: 650, imagen: "img/producto1.jpeg", codigo: "P001", seccion: "laptops" },
-  { id: 2, nombre: "Laptop Dell", precio: 700, imagen: "img/producto11.jpg", codigo: "P011", seccion: "laptops" },
-  { id: 3, nombre: "PC Gamer", precio: 1200, imagen: "img/producto12.jpg", codigo: "P012", seccion: "laptops" },
+  { id: 2, nombre: "Laptop Dell", precio: 700, imagen: "img/producto11.jpeg", codigo: "P011", seccion: "laptops" },
+  { id: 3, nombre: "PC Gamer", precio: 1200, imagen: "img/producto12.jpeg", codigo: "P012", seccion: "laptops" },
   { id: 4, nombre: "Laptop Lenovo", precio: 600, imagen: "img/producto10.jpg", codigo: "P010", seccion: "laptops" },
-  { id: 5, nombre: "Laptop ASUS", precio: 750, imagen: "img/producto13.jpg", codigo: "P013", seccion: "laptops" },
+  { id: 5, nombre: "Laptop ASUS", precio: 750, imagen: "img/producto13.webp", codigo: "P013", seccion: "laptops" },
 
   // Celulares y Tablets
   { id: 6, nombre: "Smartphone Samsung", precio: 450, imagen: "img/producto2.jpg", codigo: "P002", seccion: "celulares" },
-  { id: 7, nombre: "Smartphone iPhone", precio: 950, imagen: "img/producto14.jpg", codigo: "P014", seccion: "celulares" },
-  { id: 8, nombre: "Tablet Lenovo", precio: 300, imagen: "img/producto15.jpg", codigo: "P015", seccion: "celulares" },
+  { id: 7, nombre: "Smartphone iPhone", precio: 950, imagen: "img/producto14.jpeg", codigo: "P014", seccion: "celulares" },
+  { id: 8, nombre: "Tablet Lenovo", precio: 300, imagen: "img/producto15.webp", codigo: "P015", seccion: "celulares" },
   { id: 9, nombre: "Tablet Samsung", precio: 350, imagen: "img/producto16.jpg", codigo: "P016", seccion: "celulares" },
   { id: 10, nombre: "Smartphone Xiaomi", precio: 400, imagen: "img/producto4.jpeg", codigo: "P004", seccion: "celulares" },
 
   // Accesorios (solo mouse y teclados)
   { id: 11, nombre: "Teclado Mecánico", precio: 60, imagen: "img/producto5.jpg", codigo: "P005", seccion: "accesorios" },
   { id: 12, nombre: "Mouse Gamer", precio: 40, imagen: "img/producto6.jpg", codigo: "P006", seccion: "accesorios" },
-  { id: 13, nombre: "Mouse Básico", precio: 20, imagen: "img/producto17.jpg", codigo: "P017", seccion: "accesorios" },
-  { id: 14, nombre: "Teclado USB", precio: 35, imagen: "img/producto18.jpg", codigo: "P018", seccion: "accesorios" },
-  { id: 15, nombre: "Mouse Inalámbrico", precio: 50, imagen: "img/producto19.jpg", codigo: "P019", seccion: "accesorios" },
+  { id: 13, nombre: "Mouse Básico", precio: 20, imagen: "img/producto17.jpeg", codigo: "P017", seccion: "accesorios" },
+  { id: 14, nombre: "Teclado USB", precio: 35, imagen: "img/producto18.jpeg", codigo: "P018", seccion: "accesorios" },
 
   // Monitores
   { id: 16, nombre: "Monitor LG 24''", precio: 200, imagen: "img/producto7.jpeg", codigo: "P007", seccion: "monitores" },
