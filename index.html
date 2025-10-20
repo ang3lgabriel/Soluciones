@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Online</title>
+  <title>Soluciones Digitales HN</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script> 
- <script src="js/index.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <!-- Encabezado -->
   <header>
     <h1>Soluciones Digitales HN</h1>
     <nav>
-      <a href="index.html">Inicio</a>
+      <a href="#laptops">Laptops</a>
+      <a href="#celulares">Celulares</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#gaming">Gaming</a>
+      <a href="#oficina">Oficina</a>
       <a href="register.html">Registrarse</a>
       <a href="login.html">Login Empleado</a>
-      <a href="#quienes-somos">Quiénes somos</a>
     </nav>
   </header>
 
@@ -28,12 +30,30 @@
     <a href="register.html">¡Regístrate y recibe un descuento!</a>
   </div>
 
-  <!-- Lista de productos -->
-  <section class="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="grid-productos" id="lista-productos">
-      <!-- Aquí el script.js insertará los 10 productos -->
-    </div>
+  <!-- Secciones de productos -->
+  <section class="productos" id="laptops">
+    <h2>Computadoras y Laptops</h2>
+    <div class="grid-productos" id="productos-laptops"></div>
+  </section>
+
+  <section class="productos" id="celulares">
+    <h2>Celulares y Tablets</h2>
+    <div class="grid-productos" id="productos-celulares"></div>
+  </section>
+
+  <section class="productos" id="accesorios">
+    <h2>Accesorios</h2>
+    <div class="grid-productos" id="productos-accesorios"></div>
+  </section>
+
+  <section class="productos" id="gaming">
+    <h2>Gaming</h2>
+    <div class="grid-productos" id="productos-gaming"></div>
+  </section>
+
+  <section class="productos" id="oficina">
+    <h2>Oficina y Hogar</h2>
+    <div class="grid-productos" id="productos-oficina"></div>
   </section>
 
   <!-- Carrito -->
@@ -46,6 +66,7 @@
     <button id="btn-ticket">Generar Ticket</button>
     <div id="ticket"></div>
   </section>
+
   <!-- Quiénes somos -->
   <section id="quienes-somos" class="quienes-somos">
     <h2>Quiénes somos</h2>
@@ -75,6 +96,7 @@
       </div>
     </div>
   </section>
+
   <footer>
     <p>&copy; 2025 Soluciones Digitales HN - Todos los derechos reservados.</p>
   </footer>
