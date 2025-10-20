@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda Online</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script src="js/script.js" defer></script> 
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
     <h1>Soluciones Digitales HN</h1>
     <nav>
@@ -18,16 +19,32 @@
     </nav>
   </header>
 
-  <!-- Secciones de productos -->
+  <!-- Burbujas flotantes -->
+  <div class="floating-bubble" id="bubble-login">
+    <a href="login.html">Ingresar (Empleado)</a>
+  </div>
+  <div class="floating-bubble promo" id="bubble-promo">
+    <a href="register.html">¡Regístrate y recibe un descuento!</a>
+  </div>
+
+  <!-- Sección: Computadoras y Laptops -->
   <section class="productos">
     <h2>Computadoras y Laptops</h2>
     <div class="grid-productos" id="productos-laptops"></div>
+  </section>
 
+  <!-- Sección: Celulares y Tablets -->
+  <section class="productos">
     <h2>Celulares y Tablets</h2>
     <div class="grid-productos" id="productos-celulares"></div>
+  </section>
 
-    <h2>Accesorios (Mouse y Teclados)</h2>
+  <!-- Sección: Accesorios (Mouse y Teclados) -->
+  <section class="productos">
+    <h2>Accesorios</h2>
     <div class="grid-productos" id="productos-accesorios"></div>
+  </section>
+
   <!-- Carrito -->
   <section class="carrito">
     <h2>Carrito de Compras</h2>
